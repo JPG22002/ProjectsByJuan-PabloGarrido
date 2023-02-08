@@ -1,0 +1,1207 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+	//Sebastian debugged the program.
+// a LOT of functions- Menu- Juan-Pablo Garrido
+	int combo(int n, int r);
+	int per(int n, int r);
+	int modeFunction(int *nums, int arry);
+	float sequenceAlpha(float a, float d, int n);
+	float sumAlpha(float a, float d, float n);
+	float sequBeta(float a, float r, int n);
+	float sumBeta(float a, float r, int n);
+	float sinterest(float principal, float rate, float time);
+	float cinterest(float principal, float rate, float time, int n);
+	float apr(float fees, float interest, float principal, int n);
+	float vari(float a[], int n);
+	float squareRoot(float m);
+	float mean(float arr[], int n);
+	double e = 2.7182;
+    double deviationS(float arr[], int n);
+	double pow(float n, float m);
+	double sin(float x);
+	double cos(float x);
+	double tan(float num);
+	double sinNom(double n);
+	double pi = 3.1415;
+    double cosh(double n);
+	double tanh(double n);
+	double sinAlpha(double num, double precision);
+	double cosAlpha(double num, double precision );
+	double atan(double x);
+	double sine (float n);
+	double ylk (float n);
+	double tanWoo (float n);
+	double fact(int n);
+    double cosecant (float n);
+	double yeeSec (float n);
+	double cotangentVariable (float n);
+	double ln(double n);
+	double logOfTen(double n);
+	double radDeg(float n);
+	double calculateMedian(int *nums, int arry);
+	long gry(long n, long r);
+	void fooPascalsT(long n);
+	void polarToRectangal(float r , float theta);
+	void rectangalToPolar (float x, float y);
+	void sortB(int *, int);
+	void fibonacci (int n);
+	void newFunction(int numberOfFunction);
+    
+    double calculateMedian(int *nums, int arry){
+	    double median = 0.0;
+	    cout << fixed << showpoint << setprecision(1);
+	    if (arry % 2 == 0)
+	    {
+	        median = (nums[arry/ 2 - 1] + nums[(arry / 2)]) / 2.0;
+	    }
+	    else
+	        median = nums[arry / 2];
+	    return median;
+	}
+	int main()
+	{
+	     int numberOfFunction;                   
+	cout << "Please choose the corresponding function to run." << endl;
+	cout<< "1. Addition" << endl;//basic maths first, most commonly used
+	cout<<"2. Subtraction" << endl;
+	cout<<"3. Multiplication" <<endl;
+	cout<<"4. Division" <<endl;
+	cout<<"5. Mean"<<endl;
+	cout<<"6. Median"<<endl;
+	cout<<"7. Mode"<<endl;
+	cout<<"8. Exponential(E to X power)"<<endl; //exponentials and logarithms
+	cout<<"9. Exponential(X to N power)"<<endl;
+	cout<<"10. Ln(Natural Log)"<<endl;
+	cout<<"11. Logarithm"<<endl;
+	cout<<"12. Factorial"<<endl;
+	cout<<"13. Arithmetic Sequence"<<endl; //not sure what math these belong to, I'm still taking precal.
+	cout<<"14. Arithmetic Sum"<<endl;
+	cout<<"15. Combination"<<endl;
+	cout<<"16. Permutation"<<endl;
+	cout<<"17. Fibonacci's Sequence"<<endl;
+	cout<<"18. Sin"<<endl;//trig functions
+	cout<<"19. Cos"<<endl;
+	cout<<"20. Tan"<<endl;
+	cout<<"21. Csc"<<endl;
+	cout<<"22. Sec"<<endl;
+	cout<<"23. Cot"<<endl;
+	cout<<"24. Inverse Sin"<<endl;
+	cout<<"25. Inverse Cos"<<endl;
+	cout<<"26. Inverse Tan"<<endl;
+	cout<<"27. Hyperbolic Sin"<<endl;
+	cout<<"28. Hyperbolic Cos"<<endl;
+	cout<<"29. Hyperbolic Tan"<<endl;
+	cout<<"30. Pascal's Triangle"<<endl;//things that sound like geometry
+	cout<<"31. Geometric Sequence"<<endl;
+	cout<<"32. Geometric Sum"<<endl;
+	cout<<"33. Simple Interest"<<endl; // money related things
+	cout<<"34. Compound Interest"<<endl;
+	cout<<"35. APR Financing"<<endl;
+	cout<<"36. Standard Deviation"<<endl;
+	cout<<"37. Variance"<<endl;
+	cout<<"38. Polar to Rectangular"<<endl;
+	cout<<"39. Rectangular to Polar"<<endl;
+	cout<<"Enter '0' to exit the program."<<endl;
+	    cin >> numberOfFunction;
+	    while (numberOfFunction != 0)
+	    {
+	        newFunction(numberOfFunction);
+	        cout << "Please choose the corresponding function to run." << endl;
+	cout<< "1. Addition" << endl;
+	cout<<"2. Subtraction" << endl;
+	cout<<"3. Multiplication" <<endl;
+	cout<<"4. Division" <<endl;
+	cout<<"5. Mean"<<endl;
+	cout<<"6. Median"<<endl;
+	cout<<"7. Mode"<<endl;
+	cout<<"8. Exponential(E to X power)"<<endl;
+	cout<<"9. Exponential(X to N power)"<<endl;
+	cout<<"10. Ln(Natural Log)"<<endl;
+	cout<<"11. Logarithm"<<endl;
+	cout<<"12. Factorial"<<endl;
+	cout<<"13. Arithmetic Sequence"<<endl;
+	cout<<"14. Arithmetic Sum"<<endl;
+	cout<<"15. Combination"<<endl;
+	cout<<"16. Permutation"<<endl;
+	cout<<"17. Fibonacci's Sequence"<<endl;
+	cout<<"18. Sin"<<endl;
+	cout<<"19. Cos"<<endl;
+	cout<<"20. Tan"<<endl;
+	cout<<"21. Csc"<<endl;
+	cout<<"22. Sec"<<endl;
+	cout<<"23. Cot"<<endl;
+	cout<<"24. Inverse Sin"<<endl;
+	cout<<"25. Inverse Cos"<<endl;
+	cout<<"26. Inverse Tan"<<endl;
+	cout<<"27. Hyperbolic Sin"<<endl;
+	cout<<"28. Hyperbolic Cos"<<endl;
+	cout<<"29. Hyperbolic Tan"<<endl;
+	cout<<"30. Pascal's Triangle"<<endl;
+	cout<<"31. Geometric Sequence"<<endl;
+	cout<<"32. Geometric Sum"<<endl;
+	cout<<"33. Simple Interest"<<endl;
+	cout<<"34. Compound Interest"<<endl;
+	cout<<"35. APR Financing"<<endl;
+	cout<<"36. Standard Deviation"<<endl;
+	cout<<"37. Variance"<<endl;
+	cout<<"38. Polar to Rectangular"<<endl;
+	cout<<"39. Rectangular to Polar"<<endl;
+	cout<<"Enter '0' to exit the program."<<endl;
+	    cin >> numberOfFunction;
+	    }
+	    return 0;
+	}
+	double fact(int n)     //Ramanpreets part
+	{
+	    if (n == 0 || n == 1)
+	    {
+	        return 1;
+	    }
+	    else                  
+	    {
+	        return n * fact(n-1);
+	    }
+	}
+	int combo(int n, int r)  
+	{
+	   return fact(n) / (fact(r) * fact(n-r)) ;
+	}
+	int per(int n, int r)   
+	{
+	    return fact(n) / fact(n-r); 
+	}
+	int modeFunction(int *nums, int arry)
+	{
+	    int mode = 0;
+	    int val = 0;
+	    int index;
+	    for (index = 0; index < arry - 1; index++) 
+	    {
+	        if (nums[index] == nums[index + 1])
+	        {
+	            mode++;
+	            val = *(nums + index);
+	        }
+	    }
+	    if (val > 0)
+	        return val;
+	    else
+	        return 0;
+	}
+	float sequenceAlpha(float a, float d, int n)   
+	{
+	    float nthterm;
+	    for(int i=0; i <= n; i++) 
+	    {
+	        nthterm = a + (n-1) * d;
+	    }
+	    return nthterm;
+	}
+	float sumAlpha(float a, float d, float n)    
+	{
+	    float first = n/2,              
+	          distance = (n-1) * d,    
+	          twicea = 2*a,             
+	          sum;                     
+	    sum = first * (twicea + distance); 
+	    return sum;
+	}
+	float sequBeta(float a, float r, int n)  
+	{
+	    float nthterm;             
+	    for (int i=0; i <= n; i++) 
+	    {
+	        nthterm = a * (pow(r,(n-1)));
+	    }
+	    return nthterm;
+	}
+	float sumBeta(float a, float r, int n)       
+	{
+	    float sum;  
+	    for(int i=0; i <= n; i++)
+	    {
+	        sum = (a * (pow(r,n)-1))/(r-1);
+	    }
+	    return sum;
+	}
+	float sinterest(float principal, float rate, float time)            
+	{
+	    float result = 0;
+	    result = principal * (1 + rate * (time/12));
+	    return result;
+	}
+	float cinterest(float principal, float rate, float time, int n)   
+	{
+	    float result;
+	    result = principal * (pow((1 + rate / n), (n*time/12)));
+	    return result;
+	}
+	float apr(float fees, float interest, float principal, int n)        
+	{
+	    float total;
+	    total = (((( fees + interest*principal) / principal) / n) * 365) / 100;
+	    return total;
+	}
+	float vari(float a[], int n)
+	{
+	    int sum = 0;
+	    for (int i = 0; i < n; i++)
+	        sum += a[i];
+	    double mean = (double)sum /
+	                  (double)n;
+	    double sqDiff = 0;
+	    for (int i = 0; i < n; i++)
+	        sqDiff += (a[i] - mean) *
+	                  (a[i] - mean);
+	    return sqDiff / n;
+	}
+	float squareRoot(float m)
+	{
+	   float i=0;
+	   float x1,x2;
+	   while( (i*i) <= m )
+	   {
+	        i+=0.1;
+	        x1=i;
+	    }
+	   for(int j=0;j<10;j++)
+	   {
+	      x2=m;
+	      x2/=x1;
+	      x2+=x1;
+	      x2/=2;
+	      x1=x2;
+	   }
+	   return x2;
+	}
+	float mean(float arr[], int n){
+	    float sum = 0;
+	    for(int i = 0;i < n; i++)
+	        sum += arr[i];
+	    return sum/n;
+	}
+	double deviationS(float arr[], int n)
+	{
+	    return squareRoot(vari(arr, n));
+	}
+	double pow(float n, float m)
+	{
+	    float total = 1;
+	    if (m < 0) 
+	    {
+	        float positive;
+	        positive = m * -1; 
+	        for (int i = 0; i < positive; i++)
+	        {
+	            total *= n;
+	        }
+	        return 1 / total;
+	    }
+	    else 
+	    {
+	        for (int i = 0; i < m; i++)
+	            {
+	                total *= n;
+	            }
+	        return total;
+	    }
+	}
+	double sin(float x)
+	{
+	    double result = 1;
+	    double mxx = -x*x;
+	    double addens = 1;
+	    double temp = 2;
+	    for(int n = 2; n <= 200; n++)
+	    {
+	        addens *= mxx/temp++/temp++;
+	        result += addens;
+	    }
+	    return x*result;
+	}
+	double cos(float x)
+	{
+	    double result = 1;
+	    double mxx = -x*x;
+	    double addens = 1;
+	    double temp = 1;
+	    for(int n = 2; n <= 200; n++)
+	    {
+	        addens *= mxx/temp++/temp++;
+	        result += addens;
+	    }
+	    return result;
+	}
+	double tan(float num)
+	{
+	    return sin(num)/tan(num);
+	}
+	double sinNom(double n)
+	{
+	    return  (pow(e,n)-pow(e,-n))/2;
+	}
+	double cosh(double n)
+	{
+	    return  (pow(e,n)-pow(e,-n))/2;
+	}
+	double tanh(double n)
+	{
+	    return  (pow(e,n)-pow(e,-n))/(pow(e,n)+pow(e,-n));
+	}
+	double sinAlpha(double num, double precision = 19)
+	{ 
+	    double value = 0;
+	    if (num > 1 || num < -1)
+	    {
+	       cout << "NaN" << endl;
+	    }
+	    else{
+	    for(int n = 0; n < precision; n++){
+	        value += 1.4298004337*(1/pow(2,2*n)*(pow(num,2*n+1)/(2*n+1)));
+	    }
+	    return value;
+	    }
+	}
+	double cosAlpha(double num, double precision = 19)
+	{
+	    return (3.1415/2) - sinAlpha(num);
+	}
+	double atan(double x)
+	{ 
+	    double value = 0;
+	    for(int n = 0; n < 29; n++){ 
+	        value += pow(-1.0, n) * pow(x, 2*n+1) / (2*n + 1);
+	    }
+	    return value;
+	    
+	}
+	double sine (float n)
+	{
+	    return sin(radDeg((n)));
+	}
+	double ylk (float n)
+	{
+	    return cos(radDeg((n)));
+	}
+	double tanWoo (float n)
+	{
+	    return tan(radDeg((n)));
+	}
+	double cosecant (float n)
+	{
+	    return 1/sin(radDeg((n)));
+	}
+	double yeeSec (float n)
+	{
+	    return 1/cos(radDeg((n)));
+	}
+	double cotangentVariable (float n)
+	{
+	    return 1/tan(radDeg((n)));
+	}
+	double ln(double n)
+	{
+	    double num, mul, cal, sum = 0;
+	    num = (n - 1) / (n + 1);
+	    for (int i = 1; i <= 1000; i++)
+	    {
+	        mul = (2 * i) - 1;
+	        cal = pow(num, mul);
+	        cal = cal / mul;
+	        sum = sum + cal;
+	    }
+	    sum = 2 * sum;
+	    return sum;
+	}
+	double logOfTen(double n)
+	{
+	    return (ln(n) / 2.303);
+	}
+	double radDeg(float n)
+	{
+	    double angledivide;
+	    angledivide = n * (pi / 180);
+	    return angledivide;
+	}
+	double median(float *nums, int arry)
+	{
+	    double median = 0.0;
+	    cout << fixed << showpoint << setprecision(1);
+	    if (arry % 2 == 0)
+	    {
+	        median = (nums[arry/ 2 - 1] + nums[(arry / 2)]) / 2.0;
+	    }
+	    else
+	    {
+	         median = nums[arry / 2];
+	    }
+	    return median;
+	}
+	long gry(long n , long r)
+	{
+	   long nume = 1, i;
+	   for(i = n; i>r; i--)
+	      nume *= i;
+	   return long(nume/fact(n-r));
+	}
+	void fooPascalsT(long n)
+	{
+	   for(int i = 0; i<n; i++)
+	    {
+	      for(int j = 0; j<(n-i-1); j++)
+	         cout <<setw(3)<< " ";
+	      for(int j = 0; j<(i+1); j++)
+	         cout <<setw(3)<< gry(i, j) <<setw(3)<< " ";
+	      cout << endl;
+	    }
+	}
+	void polarToRectangal(float r , float theta)
+	{
+	    double x, y;
+	    x = r * cos(radDeg(theta));
+	    y = r * sin(radDeg(theta));
+	    cout << "The value of x is " << x << ".\nThe value of y is " << y << ".\n" << endl;
+	}
+	void rectangalToPolar (float x, float y)
+	{
+	    double r, theta;
+	    r = squareRoot(pow(x, 2) + pow (y, 2));
+	    theta = atan (y / x) * 180 / pi;
+	    cout << "The value of r is " << r << "."<< endl;
+        cout << "The value of the angle is " << theta << " degrees." << endl;
+	}
+	void sortB(int *nums, int arry)
+	{
+	    int temp;
+	    for (int i = 0; i < arry; i++)
+	    {
+	        for (int j = i + 1; j < arry; j++)
+	        {
+	            if (nums[i] > nums[j])
+	            {
+	                temp = nums[i];
+	                nums[i] = nums[j];
+	                nums[j] = temp;
+	            }
+	        }
+	    }
+	}
+	void fibonacci (int n)
+	{
+	   int t1 = 0, t2 = 1, nextTerm = 0;
+	    for (int i = 1; i <= n; ++i)
+	    {
+	        if(i == 1)
+	        {
+	            cout << t1 << " \n";
+	            continue;
+	        }
+	        if(i == 2)
+	        {
+	            cout << t2 << " \n";
+	            continue;
+	        }
+	        nextTerm = t1 + t2;
+	        t1 = t2;
+	        t2 = nextTerm;
+	        cout << nextTerm << endl;
+	    }
+	}
+	void newFunction(int numberOfFunction)   //Anthony's part
+	{
+	    int v1;
+	    float v2, v3, v4;
+	    double v5;
+	    switch (numberOfFunction)
+	    {
+	        case 1:
+	            cout << "Enter the first number, followed by the second number that you would like to add together." << endl;
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Please try again: " << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Please try entering the second number again: " << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "The sum of the number " << v2 << " and the number " << v3 << " is " << v2 + v3 << endl;
+	            break;
+	        case 2:
+	            cout << "Enter the minuend followed by the subtrahend.\n"<< endl;
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Please try again: " << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Please try entering the second number again:" << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "The difference of " << v2 << " and " << v3 << " is " << v2 - v3 << endl;
+	            break;
+	        case 3: 
+	            cout << "Enter the first and second number you would like to be multiplied." << endl;
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Please try again: "<< endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Please try entering the second number again: " << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "Multiplication of" << v2 << " and " << v3 << " is " << v2 * v3 << endl;
+	            break;
+	        case 4:
+	            cout << "Enter the dividend followed by the divisor.\n" << endl;
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Please try again: " << endl;
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Please try entering the second number again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            if (v3 == 0)
+	            {
+	                cout << "You can't divide by 0.\n";
+	                break;
+	            }
+	            else
+	            {
+	               cout << fixed << setprecision(2);
+	               cout << "The quotient of" << v2 << " and " << v3 << " is " << v2 / v3 << endl;
+	            }
+	            break;
+	        case 5:
+	            float arr[50];
+	            cout << "Enter the size of array: \n";
+	            while(!(cin >> v1) || v1 <=0)
+	                {
+	                    cout << "Something went wrong. Enter the size, no negative numbers or zero: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the numbers of the array one at a time: \n";
+	            for(int i = 0; i < v1; i++)
+	            {
+	                cout << "Enter number" << i + 1 << " of the array: \n";
+	                while (!(cin >> arr[i]))
+	                   {
+	                       cout << "Something went wrong. Enter number" << i + 1 << " again. \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                   }
+	            }
+	            cout << "\nMean = "<< mean(arr, v1) << endl;
+	            break;
+		    case 6:
+	            {
+	                int *nums;
+	                int arry;
+	                char repeat = ' ';
+	                cout << "Enter size of the array: " << endl;
+	                while (!(cin >> arry) || arry <= 0)
+	                {
+	                    cout << "Something went wrong. Array size can't be negative: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	                nums = new int[arry];
+	                for (int count = 0; count < arry; count++)
+	                {
+	                    cout << "Number " << (count + 1) << ": ";
+	                    while (!(cin >> nums[count]))
+	                    {
+	                        cout << "Something went wrong. Enter the number again: " << count << endl;
+	                        cin.clear();
+	                        cin.ignore(123, '\n');
+	                    }
+	                }
+	                sortB(nums, arry);
+	                cout << fixed << showpoint << setprecision(1);
+	                cout << "\nThe median of this array is: ";
+	                cout << calculateMedian(nums, arry) << endl;
+	                delete[] nums;
+	                nums = 0;
+	            }
+	            break;
+            case 7:
+	            {
+	                {
+	                int *nums;
+	                int arry;
+	                char repeat = ' ';
+	                cout << "Enter size of the arry: " << endl;
+	                while (!(cin >> arry) || arry <= 0)
+	                {
+	                    cout << "Something went wrong. Enter a positive number for array size: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	                nums = new int[arry];
+	                for (int count = 0; count < arry; count++)
+	                {
+	                    cout << "Number " << (count + 1) << ": ";
+	                    while (!(cin >> nums[count]))
+	                    {
+	                        cout << "Something went wrong. Enter the number again: " << count + 1 << endl;
+	                        cin.clear();
+	                        cin.ignore(123, '\n');
+	                    }
+	                }
+	                sortB(nums, arry);
+	                cout << fixed << showpoint << setprecision(1);
+	                cout << "\nThe Mode of the array is: ";
+	                cout << modeFunction(nums, arry) << endl;
+	                delete[] nums;
+	                nums = 0;
+	                }
+	            }
+	            break;
+	       case 8:
+	            cout << "Enter a number that E will be raised to.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "E to the " << v2 << " is: " << pow(e,v2) << "." << endl;
+	            break;
+	       case 9:
+	            cout << "Enter X, followed by the exponential.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Enter the first number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Enter the second number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << v2 << " to the" << v3 << " is: " << pow(v2,v3) << endl;
+	            break;
+	       case 10:
+	            cout << "Enter a number to find the natural log of it.\n";
+	            while(!(cin >> v5))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "Ln of " << v5 << " is: " << ln(v5) << endl;
+	            break;
+	       case 11:
+	            cout << "Enter a number to find the logarithm of.\n";
+	            while(!(cin >> v5))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(2);
+	            cout << "Log of " << v5 << " is: " << logOfTen(v5) << endl;
+	            break;
+	       case 12:
+	            cout << "Enter a number to find its Factorial.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            if (v2 < 0)
+	            {
+	                cout << "Factorial is positive numbers only.\n";
+	            }
+	            else
+	            {
+	                cout << fixed << setprecision(2) << "Factorial of " << v2 << " is: " << fact(v2) << endl;
+	            }
+	            break;
+	       case 13:
+	            cout << "Enter the first number of the sequence.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the distance.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the term's position in the sequence.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << sequenceAlpha(v2, v3, v1) << endl;
+	            break;
+	       case 14: 
+	            cout << "Enter the first number of the sum.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the distance.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the position.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << sumAlpha(v2, v3, v1) << endl;
+	            break;
+	       case 15:
+	            cout << "Enter variable n.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter variable r\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            if (v3 > v2)
+	            {
+	                cout << "R can't be bigger than N.\n\n";
+	                break;
+	            }
+	            else{
+	            cout << combo(v2, v3) << endl;
+	            }
+	            break;
+	        case 16:
+	            cout << "Enter variable N\n";
+	             while(!(cin >> v2) || v2 < 0)
+	                {
+	                    cout << "Something went wrong. Try again (must be positive): \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter variable R\n";
+	            while(!(cin >> v3) || v3 < 0) 
+	                {
+	                    cout << "Something went wrong. Try again (must be positive): \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            if (v3 > v2) 
+	            {
+	                cout << "PSomething went wrong. Make sure R isn't bigger than N.\n\n";
+	                break;
+	            }
+	            else{ 
+	            cout << per(v2, v3) << endl;
+	            }
+	            break;
+	        
+	        case 17: 
+	            cout << "Enter the number in the Fibonacci Sequence.\n";
+	            while(!(cin >> v1) || v1 > 40 || v1 <= 0)
+	                {
+	                    cout << "Something went wrong. Enter a positive number 1-40: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	                cout << "The Fibonacci Sequence is: \n";
+	                fibonacci(v1);
+	                cout << endl;
+	            break;
+	       case 18:
+	            cout << "Enter the number you want to find the Sin of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Please try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Sin: " << sine(v2) << endl;
+	            break;
+	       case 19:
+	            cout << "Enter the number you want to find the Cos of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Cos: " << ylk(v2) << endl;
+	            break;
+	        case 20:
+	            cout << "Enter the number you want to find the tangent of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Tan: " << tanWoo(v2) << endl;
+	            break;
+	       case 21:
+	            cout << "Enter the number you want to find the Csc of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Csc: " << 1/ylk(v2) << endl;
+	            break;
+	        case 22:
+	            cout << "Enter the number you want to find the Sec of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Sec: " << 1/sine(v2) << endl;
+	            break;
+	        case 23:
+	            cout << "Enter the number you want to find the Cot of.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Cot: " << 1/tanWoo(v2) << endl;
+	            break;
+	        case 24:
+	            cout << "Enter a number to find its Inverse Sin.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Inverse Sin: " << sinAlpha(v2)  << endl;
+	            break;
+	        case 25:
+	            cout << "Enter a number to find its Inverse Cos.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Inverse Cos:" << cosAlpha(v2) << endl;
+	            break;
+	        case 26:
+	            cout << "Enter a number to find its Inverse Tan.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Inverse Tan: " << atan(v2) << endl;
+	            break;
+	        
+	        case 27:
+	            cout << "Enter a number to find its Hyperbolic Sin.\n";
+	            while(!(cin >> v5))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Hyperbolic Sin: "<< sinNom(v5) << endl;
+	            break;
+	        case 28:
+	            cout << "Enter a number to find its Hyperbolic Cos.\n";
+	            while(!(cin >> v5))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Hyperbolic Cos:"<< cosh(v5) << endl;
+	            break;
+	        case 29:
+	            cout << "Enter a number to find its Hyperbolic Tan.\n";
+	            while(!(cin >> v5))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Hypberbolic Tan:"<< tanh(v5) << endl;
+	            break;
+	       case 30:
+	            cout << "Enter number for Pascal's Triangle. 1-13\n";
+	            while(!(cin >> v1) || v1 > 13 || v1 <= 0)
+	                {
+	                    cout << "Something went wrong. Enter a number 1-13: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	                fooPascalsT(v1);
+	            break;
+	        case 31:
+	            cout << "Enter the first number in the sequence.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try again:\n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the ratio.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try again:: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter position of the term.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed;
+	            cout << sequBeta(v2, v3, v1) << endl;
+	            break;
+	        case 32:
+	            cout << "Enter the first term.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter sum ratio.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter position of term.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << setprecision(3) << sumBeta(v2, v3, v1) << endl;
+	            break;
+	       case 33:
+	            cout << "Enter principal amount of money.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter your rate, 0.06 for 6% in America.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter time period in months.\n";
+	            while(!(cin >> v4))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Simple Interest: " << sinterest(v2, v3, v4) << endl;
+	            break;
+	        case 34:
+	            cout << "Enter the principal amount of money.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter your rate, 0.06 for 6% in America.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the time in months.\n";
+	            while(!(cin >> v4))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter times applied per year.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Compound interest: " << cinterest(v2, v3, v4, v1) - v2 << ". Total: "
+	                 << cinterest(v2, v3, v4, v1) <<  endl;
+	            break;
+	        case 35:
+	            cout << "Enter fees being paid.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something wnet wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the principal amount of money.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try again: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter your rate, 0.06 for 6% in America.\n";
+	            while(!(cin >> v4))
+	                {
+	                    cout << "Something went wrong. Please try again.\n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter time in months.\n";
+	            while(!(cin >> v1))
+	                {
+	                    cout << "Something went wrong. Enter the time: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << fixed << "Paying:" << apr(v2, v3, v4, v1) << "% APR." << endl;
+	            break;
+            case 36:
+	            arr[50];
+	            cout << "Enter the size of array: \n";
+	            while(!(cin >> v1) || v1 <=0)
+	                {
+	                    cout << "Something went wrong. Enter the size of the array, which can't be zero or below zero (negative).\n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the numbers of the array: \n";
+	            for(int i = 0; i < v1; i++)
+	            {
+	                cout << "Enter the number" << i + 1 << " of the array: \n";
+	                while (!(cin >> arr[i]))
+	                   {
+	                       cout << "Something went wrong. Enter the number " << i + 1 << "again. \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                   }
+	            }
+	            cout << "\nStandard Deviation = " << deviationS(arr, v1) << endl;
+	            break;
+	        case 37:
+	            arr[50];
+	            cout << "Enter the size of array: \n";
+	            while(!(cin >> v1) || v1 <=0)
+	                {
+	                    cout << "Something went wrong. Array size can't be zero, or below zero (negative).: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the elements of array: \n";
+	            for(int i = 0; i < v1; i++)
+	            {
+	                cout << "Enter the number" << i + 1 << " of the array: \n";
+	                while (!(cin >> arr[i]))
+	                   {
+	                       cout << "Something went wrong. Enter the number again." << i + 1 << " again. \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                   }
+	            }
+	            cout << "\nVariance = " << vari(arr, v1) << endl;
+	            break;
+	        default: cout << "Enter a correct operator." << endl;
+	        break;
+	        case 38:
+	            cout << "Enter the r variable.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Error. Please enter the r in a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter theta:\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Enter theta: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "TConversion from polar to rectangular: \n";
+	            polarToRectangal(v2 , v3);
+	            break;
+	        case 39:
+	            cout << "Enter the x variable.\n";
+	            while(!(cin >> v2))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Enter the y variable.\n";
+	            while(!(cin >> v3))
+	                {
+	                    cout << "Something went wrong. Try entering a number: \n";
+	                    cin.clear();
+	                    cin.ignore(123, '\n');
+	                }
+	            cout << "Conversion from rectangular to polar: \n";
+	            rectangalToPolar (v2, v3);
+	            break;
+	    }
+	}
+        //Sebastian debugged the program.

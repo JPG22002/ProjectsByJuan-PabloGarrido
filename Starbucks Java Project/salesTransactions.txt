@@ -1,0 +1,37 @@
+
+----------------------------------------------
+2021-11-29 04:31:52-AM Edwin V 
+ Merchandise: [Merchandise{size=M, nameOfMerch=Shirt, price=4.5, quantity=3}] 
+ Payment Method: null AmountPaid=14.445
+----------------------------------------------
+
+
+----------------------------------------------
+2021-11-29 04:33:34-AM e  
+ Payment Method: null AmountPaid=0.0
+----------------------------------------------
+
+
+----------------------------------------------
+2021-11-29 04:36:32-AM Edwin  
+ Snacks: [Snack{name='Apple', description='fruit snack', cost=2.5}]
+ Merchandise: [Merchandise{size=L, nameOfMerch=Shirt, price=9.5, quantity=3}] 
+ Payment Method: null AmountPaid=33.17
+----------------------------------------------
+
+
+----------------------------------------------
+2021-11-29 04:37:26-AM Edwin  
+ Payment Method: null AmountPaid=0.0
+----------------------------------------------
+
+On 2021-11-29 04:37:33-AM, the FIU Starbucks store has sold $33.17
+
+----------------------------------------------
+2021-11-29 04:38:53-AM Edwin  
+ Snacks: [Snack{name='Apple', description='fruit snack', cost=2.5}, Snack{name='bagel', description='carbohydrate snack', cost=3.5}]
+ Merchandise: [Merchandise{size=M, nameOfMerch=Shirt, price=4.5, quantity=8}] 
+ Payment Method: null AmountPaid=44.94
+----------------------------------------------
+
+On 2021-11-29 04:39:20-AM, the FIU Starbucks store has sold $44.94
